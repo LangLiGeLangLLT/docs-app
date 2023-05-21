@@ -4,4 +4,11 @@ const nextraConfig = {
   themeConfig: './theme.config.tsx',
 }
 
-module.exports = require('nextra')(nextraConfig)
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  basePath: '/docs',
+}
+
+const withNextra = require('nextra')(nextraConfig)
+
+module.exports = withNextra(nextConfig)
